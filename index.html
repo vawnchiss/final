@@ -4,9 +4,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="app.js"></script>
-    <link href="output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="animate.css" />
-    <script src="wow.js"></script>
+    <link href="/css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/node_modules/animate.css/animate.css" />
+    <script src="/node_modules/wowjs/dist/wow.js"></script>
     <script>
       new WOW().init();
     </script>
@@ -14,16 +14,20 @@
   <body class="flex flex-col gap-16">
     <div class="container max-w-[1110px] flex flex-col mx-auto px-4 lg:px-0">
       <div class="flex px-8 py-12 sm:py-4 sm:px-0">
-        <img class="wow animate__animated animate__fadeIn" src="hinh-anh/Dark.svg" alt="" />
+        <img
+          class="wow animate__animated animate__fadeIn cursor-pointer"
+          src="hinh-anh/Dark.svg"
+          alt=""
+        />
         <div
           class="wow animate__animated animate__fadeIn hidden md:flex items-center text-Label gap-8 ml-8 mr-auto"
         >
-          <div>About</div>
-          <div>Products</div>
-          <div>Pricing</div>
-          <div>Blog</div>
-          <div>Jobs</div>
-          <div class="flex items-center gap-1">
+          <div class="cursor-pointer">About</div>
+          <div class="cursor-pointer">Products</div>
+          <div class="cursor-pointer">Pricing</div>
+          <div class="cursor-pointer">Blog</div>
+          <div class="cursor-pointer">Jobs</div>
+          <div class="cursor-pointer flex items-center gap-2">
             More
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -43,13 +47,13 @@
         </div>
         <div class="hidden md:flex gap-3">
           <img
-            class="wow animate__animated animate__fadeIn"
+            class="wow cursor-pointer animate__animated animate__fadeIn"
             data-wow-delay="300ms"
             src="hinh-anh/App Store Badge.svg"
             alt=""
           />
           <img
-            class="wow animate__animated animate__fadeIn"
+            class="wow cursor-pointer animate__animated animate__fadeIn"
             data-wow-delay="600ms"
             src="hinh-anh/Google Play Badge.svg"
             alt=""
@@ -69,7 +73,7 @@
         </svg>
       </div>
       <div
-        class="fixed hidden flex-col h-full w-full gap-4 px-12 py-12 top-0 right-0 bg-slate-100 z-10 text-black text-Label"
+        class="animate__animated animate__slideOutRight fixed flex flex-col h-full w-full gap-4 px-12 py-12 top-0 right-0 bg-slate-100 z-10 text-black text-Label"
         id="mobileMenu"
       >
         <svg
@@ -79,31 +83,44 @@
           stroke-width="1.5"
           stroke="currentColor"
           class="wow animate__animated animate__rotateIn w-6 h-6 cursor-pointer ml-auto"
+          data-wow-delay="500ms"
           onclick="toggleMenu()"
         >
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
         <div class="flex flex-col gap-6 wow animate__animated animate__fadeInDown">
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="1000ms">About</div>
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="800ms">
-            Products
+          <div class="cursor-pointer">About</div>
+          <div class="cursor-pointer">Products</div>
+          <div class="cursor-pointer">Pricing</div>
+          <div class="cursor-pointer">Blog</div>
+          <div class="cursor-pointer">Jobs</div>
+          <div class="cursor-pointer flex gap-2 items-center">
+            More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-4 h-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+              />
+            </svg>
           </div>
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="600ms">
-            Pricing
-          </div>
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="400ms">Blog</div>
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="200ms">Jobs</div>
-          <div class="wow animate__animated animate__fadeInDown" data-wow-delay="100ms">More</div>
         </div>
         <div class="flex flex-wrap gap-3 mt-auto mb-10">
           <img
-            class="wow animate__animated animate__fadeIn"
+            class="wow cursor-pointer animate__animated animate__fadeIn"
             data-wow-delay="300ms"
             src="hinh-anh/App Store Badge.svg"
             alt=""
           />
           <img
-            class="wow animate__animated animate__fadeIn"
+            class="wow cursor-pointer animate__animated animate__fadeIn"
             data-wow-delay="600ms"
             src="hinh-anh/Google Play Badge.svg"
             alt=""
@@ -118,7 +135,7 @@
           Track your product sales from anywhere, anytime.
         </div>
         <button
-          class="wow animate__animated animate__fadeInDown bg-blue-600 w-fit h-fit px-8 py-3 text-white text-Label rounded-md"
+          class="wow animate__animated animate__fadeInDown bg-blue-600 w-fit h-fit px-8 py-3 text-white text-Label rounded-md hover:bg-blue-500"
           data-wow-delay="900ms"
         >
           Start selling
@@ -307,6 +324,7 @@
           </div>
           <div
             class="wow animate__animated animate__fadeIn bg-white p-4 md:p-10 lg:my-8 flex flex-col"
+            data-wow-delay="1000ms"
           >
             <div class="ml-auto mb-6">
               <svg
@@ -315,6 +333,7 @@
                 height="68"
                 viewBox="0 0 80 68"
                 fill="none"
+                class="cursor-pointer"
               >
                 <g opacity="0.3" clip-path="url(#clip0_1_222)">
                   <path
@@ -382,6 +401,7 @@
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
+                    class="cursor-pointer"
                   >
                     <path
                       fill-rule="evenodd"
@@ -398,6 +418,7 @@
                     height="24"
                     viewBox="0 0 24 24"
                     fill="none"
+                    class="cursor-pointer"
                   >
                     <path
                       fill-rule="evenodd"
@@ -526,7 +547,7 @@
               faucibus sed id nisi lectus at.
             </div>
           </div>
-          <button class="wow animate__animated animate__fadeIn flex gap-2 text-blue-600">
+          <button class="wow animate__animated animate__fadeInDown flex gap-2 text-blue-600">
             View all case studies
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -550,7 +571,7 @@
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div class="wow animate__animated animate__fadeInRight col-span-2" data-wow-delay="100ms">
             <div class="flex flex-col items-start text-white">
-              <img src="hinh-anh/Light.svg" alt="logo" class="h-8" />
+              <img src="hinh-anh/Light.svg" alt="logo" class="cursor-pointer h-8" />
 
               <div class="mt-10 mb-2">Copyright © 2020 Landify UI Kit.</div>
               <div>All rights reserved</div>
@@ -561,6 +582,7 @@
                   height="32"
                   viewBox="0 0 32 32"
                   fill="none"
+                  class="cursor-pointer"
                 >
                   <path
                     opacity="0.1"
@@ -582,6 +604,7 @@
                   height="32"
                   viewBox="0 0 32 32"
                   fill="none"
+                  class="cursor-pointer"
                 >
                   <path
                     opacity="0.1"
@@ -603,6 +626,7 @@
                   height="32"
                   viewBox="0 0 32 32"
                   fill="none"
+                  class="cursor-pointer"
                 >
                   <path
                     opacity="0.1"
@@ -624,6 +648,7 @@
                   height="32"
                   viewBox="0 0 32 32"
                   fill="none"
+                  class="cursor-pointer"
                 >
                   <path
                     opacity="0.1"
@@ -646,23 +671,23 @@
             class="wow animate__animated animate__fadeInRight col-span-1 w-fit flex flex-col gap-3 text-white"
             data-wow-delay="200ms"
           >
-            <div class="text-H6 mb-3">Company</div>
-            <div class="text-Body1">About us</div>
-            <div class="text-Body1">Blog</div>
-            <div class="text-Body1">Contact us</div>
-            <div class="text-Body1">Pricing</div>
-            <div class="text-Body1">Testimonials</div>
+            <div class="cursor-pointer text-H6 mb-3">Company</div>
+            <div class="cursor-pointer text-Body1">About us</div>
+            <div class="cursor-pointer text-Body1">Blog</div>
+            <div class="cursor-pointer text-Body1">Contact us</div>
+            <div class="cursor-pointer text-Body1">Pricing</div>
+            <div class="cursor-pointer text-Body1">Testimonials</div>
           </div>
           <div
             class="wow animate__animated animate__fadeInRight col-span-1 w-fit flex flex-col gap-3 text-white"
             data-wow-delay="400ms"
           >
-            <div class="text-H6 mb-3">Support</div>
-            <div class="text-Body1">Help center</div>
-            <div class="text-Body1">Terms of service</div>
-            <div class="text-Body1">Legal</div>
-            <div class="text-Body1">Privacy policy</div>
-            <div class="text-Body1">Status</div>
+            <div class="cursor-pointer text-H6 mb-3">Support</div>
+            <div class="cursor-pointer text-Body1">Help center</div>
+            <div class="cursor-pointer text-Body1">Terms of service</div>
+            <div class="cursor-pointer text-Body1">Legal</div>
+            <div class="cursor-pointer text-Body1">Privacy policy</div>
+            <div class="cursor-pointer text-Body1">Status</div>
           </div>
           <div
             class="wow animate__animated animate__fadeInRight col-span-1 w-fit flex flex-col gap-3 text-white"
@@ -672,7 +697,7 @@
             <label for="" class="relative block w-fit">
               <input
                 type="email"
-                class="placeholder:text-Body2 placeholder:text-gray-300 bg-white/20 rounded-lg py-2 px-3 w-fit"
+                class="placeholder:text-Body2 placeholder:text-gray-300 bg-white/20 hover:bg-white/30 invalid:border invalid:border-red-400 focus:border focus:border-blue-400 rounded-lg py-2 px-3 w-fit"
                 placeholder="Your email address"
               />
               <span class="absolute right-0 flex items-center inset-y-0 pr-3">
@@ -682,6 +707,7 @@
                   height="18"
                   viewBox="0 0 18 18"
                   fill="none"
+                  class="cursor-pointer"
                 >
                   <g clip-path="url(#clip0_8_785)">
                     <path
